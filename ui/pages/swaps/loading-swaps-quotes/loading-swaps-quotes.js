@@ -18,7 +18,7 @@ import {
   getHardwareWalletType,
 } from '../../../selectors/selectors';
 import { I18nContext } from '../../../contexts/i18n';
-import { MetaMetricsContext } from '../../../contexts/metametrics.new';
+import { MetaMetricsContext } from '../../../contexts/metametrics';
 import Mascot from '../../../components/ui/mascot';
 import SwapsFooter from '../swaps-footer';
 import BackgroundAnimation from './background-animation';
@@ -149,7 +149,6 @@ export default function LoadingSwapsQuotes({
               animationEventEmitter={animationEventEmitter.current}
               width="90"
               height="90"
-              followMouse={false}
               lookAtTarget={midPointTarget}
             />
           </div>
