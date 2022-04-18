@@ -116,9 +116,26 @@
     color: var(--color-primary-default);
   }
 
-  &__item-icon {
-    width: 16px;
-    height: 16px;
+  &__my-accounts {
+    position: relative;
+  }
+
+  &__refreshing-accounts {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.95;
+    z-index: 202;
+
+    &__logo {
+      display: flex;
+      margin: auto;
+      width: 80px;
+    }
+
+    &__loading-overlay__spinner {
+      width: 18px;
+    }
   }
 
   &__accounts-container {
@@ -193,10 +210,6 @@
         margin-top: -5px;
       }
     }
-  }
-
-  &__loading-overlay__spinner {
-    display: flex;
   }
 
   &__account-info {

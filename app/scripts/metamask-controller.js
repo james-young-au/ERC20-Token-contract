@@ -1995,6 +1995,7 @@ export default class MetamaskController extends EventEmitter {
         );
       }
 
+      // check balance of next three accounts, if all accounts doesn't have balance remove them
       for (let index = 0; index < 3; index++) {
         await keyringController.addNewAccount(primaryKeyring);
         accounts = await keyringController.getAccounts();

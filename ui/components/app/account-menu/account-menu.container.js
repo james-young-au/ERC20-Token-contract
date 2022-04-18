@@ -24,8 +24,11 @@ const SHOW_SEARCH_ACCOUNTS_MIN_COUNT = 5;
 
 function mapStateToProps(state) {
   const {
+    appState,
     metamask: { isAccountMenuOpen },
   } = state;
+  const { isLoading } = appState;
+
   const accounts = getMetaMaskAccountsOrdered(state);
   const origin = getOriginOfCurrentTab(state);
   const selectedAddress = getSelectedAddress(state);
@@ -33,6 +36,7 @@ function mapStateToProps(state) {
   return {
     isAccountMenuOpen,
     addressConnectedSubjectMap: getAddressConnectedSubjectMap(state),
+    isLoading,
     originOfCurrentTab: origin,
     selectedAddress,
     keyrings: getMetaMaskKeyrings(state),

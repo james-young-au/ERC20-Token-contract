@@ -124,8 +124,8 @@ export function autoDetectAccounts() {
         resolve();
       });
     })
-      .then(() => {
-        dispatch(showAccountsPage());
+      .then(async () => {
+        await dispatch(showAccountsPage());
         return accounts;
       })
       .catch((err) => {
